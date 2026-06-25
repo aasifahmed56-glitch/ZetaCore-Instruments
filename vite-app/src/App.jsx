@@ -93,10 +93,10 @@ function App() {
           </div>
           <div className="hero-features">
             <div className="feature-item">
-              <img src="/assets/icon-research.png" alt="Research Grade Components Icon" /> <span>Research Grade<br />Components</span>
+              <img src="/assets/icon-research-v2.png" alt="Research Grade Components Icon" /> <span>Research Grade<br />Components</span>
             </div>
             <div className="feature-item">
-              <img src="/assets/icon-industrial.png" alt="Industrial Quality Standards Icon" /> <span>Industrial Quality<br />Standards</span>
+              <img src="/assets/icon-industrial-v2.png" alt="Industrial Quality Standards Icon" /> <span>Industrial Quality<br />Standards</span>
             </div>
             <div className="feature-item">
               <img src="/assets/icon-worldwide.png" alt="Worldwide Shipping Icon" /> <span>Worldwide<br />Shipping</span>
@@ -202,7 +202,7 @@ function App() {
       </section>
 
       {/* FEATURED PRODUCTS */}
-      <section className="featured-products-section">
+      <section id="resources" className="featured-products-section">
         <h2>Featured Products</h2>
         <div className="featured-grid">
           {[
