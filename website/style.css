@@ -256,6 +256,7 @@ ul {
 .feature-item img {
     width: 35px;
     height: 35px;
+    object-fit: contain;
     opacity: 0.8;
 }
 

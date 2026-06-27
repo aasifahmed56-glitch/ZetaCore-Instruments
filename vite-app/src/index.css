@@ -255,26 +255,40 @@ ul {
 
 .hero-features {
     display: flex;
-    gap: 40px;
+    align-items: center;
 }
 
 .feature-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 13px;
+    gap: 15px;
+    font-size: 14px;
     line-height: 1.3;
-    color: var(--text-light);
+    color: var(--text-white);
+    padding: 0 30px;
+    position: relative;
+    font-weight: 500;
+}
+
+.feature-item:first-child {
+    padding-left: 0;
+}
+
+.feature-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .feature-item img {
-    width: 30px;
-    height: 30px;
-    opacity: 0.9;
-    object-fit: cover;
-    transform: scale(1.2);
-    margin-right: 5px;
-    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 /* SEARCH BAR SECTION */
@@ -511,6 +525,14 @@ ul {
     overflow: visible !important;
 }
 
+.feat-item img.why-icon-img {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .industries-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -560,32 +582,17 @@ ul {
 }
 
 .featured-grid {
-    max-width: 1300px;
+    max-width: 1600px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 30px;
-    padding: 20px 10px 40px 10px; /* Padding for hover shadows and scrollbar */
-    scroll-snap-type: x mandatory;
-}
-
-/* Custom Scrollbar for the horizontal scrolling grid */
-.featured-grid::-webkit-scrollbar {
-    height: 8px;
-}
-.featured-grid::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-.featured-grid::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    padding: 20px 15px 40px 15px;
 }
 
 .prod-card {
     background-color: var(--bg-white);
-    padding: 30px 20px;
+    padding: 20px 10px;
     border-radius: 8px;
     box-shadow: var(--shadow-light);
     border: 1px solid var(--border-dark);
@@ -593,9 +600,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 0 0 calc(25% - 22.5px);
-    min-width: 280px;
-    scroll-snap-align: start;
+    text-align: center;
 }
 
 .prod-card:hover {
@@ -604,11 +609,11 @@ ul {
 }
 
 .prod-img {
-    height: 120px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .prod-img img {
@@ -618,25 +623,25 @@ ul {
 }
 
 .prod-card h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .prod-card p {
-    font-size: 13px;
+    font-size: 11px;
     color: var(--text-gray);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     flex-grow: 1;
 }
 
 .view-details {
     color: var(--primary);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .view-details:hover {
@@ -645,87 +650,100 @@ ul {
 
 /* GLOBAL SHIPPING */
 .global-shipping-section {
-    background-color: var(--bg-dark);
-    padding: 100px 20px;
-    color: var(--text-white);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.global-shipping-section::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('/assets/Global shipping.webp');
-    background-size: cover;
-    background-position: center;
-    transform: scale(1.25);
-    z-index: -2;
-}
-
-/* Optional overlay to ensure text is readable over the background */
-.global-shipping-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(4, 8, 16, 0.7); /* Dark overlay */
-    z-index: -1;
+    background-color: var(--bg-light);
+    padding: 60px 20px;
 }
 
 .global-container {
     max-width: 1300px;
     margin: 0 auto;
+    background-color: #031022;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: relative;
-    z-index: 2;
+    overflow: hidden;
+    padding: 80px 60px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.global-container::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('/assets/Global shipping.webp');
+    background-size: cover;
+    background-position: left center;
+    z-index: -2;
+}
+
+.global-container::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; width: 60%; height: 100%;
+    background: linear-gradient(to right, transparent, #031022 30%, #031022 100%);
+    z-index: -1;
 }
 
 .global-content {
     flex: 0 0 50%;
-    padding-left: 40px;
+    padding-left: 20px;
+    color: var(--text-white);
 }
 
 .tag {
     display: inline-block;
-    background-color: rgba(0, 162, 255, 0.1);
+    background-color: rgba(0, 162, 255, 0.15);
     color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 162, 255, 0.3);
 }
 
 .global-content h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .global-content h2 span {
-    color: var(--primary);
+    color: #00d2ff;
 }
 
 .global-content p {
-    color: var(--text-light);
+    color: #a0aabf;
     margin-bottom: 30px;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .countries-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    gap: 12px;
 }
 
 .countries-grid span {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: var(--transition);
+}
+
+.countries-grid span:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* ABOUT US */

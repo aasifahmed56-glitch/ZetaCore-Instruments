@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 32 32" fill="none">
+  <!-- Liquid Fill -->
+  <path d="M6.7 14 L4.2 19.6A2 2 0 0 0 6 22h12a2 2 0 0 0 1.8-2.4L17.3 14Z" fill="#009dff" />
+  
+  <!-- Flask Outline -->
+  <path d="M9 3v6l-4.8 10.6A2 2 0 0 0 6 22h12a2 2 0 0 0 1.8-2.4L15 9V3" stroke="#00d2ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Lip -->
+  <path d="M7.5 3h9" stroke="#00d2ff" stroke-width="1.8" stroke-linecap="round" />
+  
+  <!-- White highlight/sparkle inside liquid -->
+  <polygon points="12,16.5 10.5,19.5 13.5,19.5" fill="#ffffff" />
+</svg>

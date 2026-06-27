@@ -93,16 +93,16 @@ function App() {
           </div>
           <div className="hero-features">
             <div className="feature-item">
-              <img src="/assets/icon-research-v2.png" alt="Research Grade Components Icon" /> <span>Research Grade<br />Components</span>
+              <img src="/assets/why-icon-0-hd.svg" alt="Research Grade Components Icon" /> <span>Research Grade<br />Components</span>
             </div>
             <div className="feature-item">
-              <img src="/assets/icon-industrial-v2.png" alt="Industrial Quality Standards Icon" /> <span>Industrial Quality<br />Standards</span>
+              <img src="/assets/why-icon-1-hd.svg" alt="Industrial Quality Standards Icon" /> <span>Industrial Quality<br />Standards</span>
             </div>
             <div className="feature-item">
-              <img src="/assets/icon-worldwide.png" alt="Worldwide Shipping Icon" /> <span>Worldwide<br />Shipping</span>
+              <img src="/assets/why-icon-2-hd.svg" alt="Worldwide Shipping Icon" /> <span>Worldwide<br />Shipping</span>
             </div>
             <div className="feature-item">
-              <img src="/assets/icon-technical.png" alt="Technical Expert Support Icon" /> <span>Technical<br />Expert Support</span>
+              <img src="/assets/why-icon-6-hd.svg" alt="Technical Expert Support Icon" /> <span>Technical<br />Expert Support</span>
             </div>
           </div>
         </div>
@@ -158,17 +158,17 @@ function App() {
             <h2>Why Choose Zeta Core Instruments?</h2>
             <div className="features-grid">
               {[
-                { icon: 'fa-flask', text: 'Research Grade\nComponents' },
-                { icon: 'fa-certificate', text: 'Industrial Quality\nStandards' },
-                { icon: 'fa-globe', text: 'Worldwide\nShipping' },
-                { icon: 'fa-building-columns', text: 'University & R&D\nLab Support' },
-                { icon: 'fa-wrench', text: 'Custom Product\nDevelopment' },
-                { icon: 'fa-cogs', text: 'OEM Manufacturing\nSupport' },
-                { icon: 'fa-magnifying-glass-chart', text: 'Technical\nConsultation' },
-                { icon: 'fa-truck-fast', text: 'Fast Global\nDelivery' }
+                { img: 'why-icon-0-hd.svg', text: 'Research Grade\nComponents' },
+                { img: 'why-icon-1-hd.svg', text: 'Industrial Quality\nStandards' },
+                { img: 'why-icon-2-hd.svg', text: 'Worldwide\nShipping' },
+                { img: 'why-icon-3-hd.svg', text: 'University & R&D\nLab Support' },
+                { img: 'why-icon-4-hd.svg', text: 'Custom Product\nDevelopment' },
+                { img: 'why-icon-5-hd.svg', text: 'OEM Manufacturing\nSupport' },
+                { img: 'why-icon-6-hd.svg', text: 'Technical\nConsultation' },
+                { img: 'why-icon-7-hd.svg', text: 'Fast Global\nDelivery' }
               ].map((feat, i) => (
                 <div className="feat-item" key={i}>
-                  <i className={`fa-solid ${feat.icon}`}></i> 
+                  <img src={`/assets/${feat.img}`} alt={feat.text.replace('\n', ' ')} className="why-icon-img" />
                   <span>{feat.text.split('\n').map((line, idx) => <React.Fragment key={idx}>{line}<br/></React.Fragment>)}</span>
                 </div>
               ))}
